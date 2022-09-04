@@ -23,33 +23,13 @@ void PrintMatrix(int[,] matrix)
 }
 
 void Filltable(int[,] matr)
+
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
             matr[i, j] = new Random().Next(0, 10);
-        }
-    }
-}
-void ReductionElements(int[,] table)
-{
-
-    for (int i = 0; i < table.GetLength(0); i++)
-    {
-        for (int j = 0; j < table.GetLength(1); j++)
-        {
-
-            for (int k = 0; k < table.GetLength(1) - 1; k++)
-            {
-                if (table[i, k] < table[i, k + 1])
-                {
-                    int temp = table[i, k + 1];
-                    table[i, k + 1] = table[i, k];
-                    table[i, k] = temp;
-                }
-            }
-
         }
     }
 }
